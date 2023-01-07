@@ -1,0 +1,116 @@
+@import "../../template/mixin.scss";
+@import "../../template/colors.scss";
+.header {
+  height: 1573px;
+  &__top {
+    padding-top: 58px;
+    padding-bottom: 503px;
+    background: linear-gradient(
+      330.24deg,
+      rgba(0, 0, 0, 0) 31.06%,
+      #000000 108.93%
+    );
+  }
+  &__wrapper {
+    width: 100%;
+    max-width: 1771px;
+    padding: 0 10px;
+    margin: 0 auto;
+    nav {
+      @include flex-container();
+      padding-bottom: 196px;
+      ul {
+        padding-top: 7px;
+        display: flex;
+        align-items: flex-end;
+        li {
+          margin-right: 50px;
+          a {
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 25px;
+          }
+          &:last-child {
+            margin-right: 0px;
+          }
+        }
+      }
+    }
+  }
+  &__logo {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 33px;
+    letter-spacing: 0.01em;
+    text-transform: capitalize;
+    color: $normalTextColor;
+  }
+  &__search {
+    opacity: 0.6;
+    @include flex-container();
+    align-items: flex-end;
+    width: 88px;
+    input {
+      margin-left: 12px;
+      width: 66px;
+      background: transparent;
+      border: none;
+      &::placeholder {
+        font-weight: 400;
+        font-size: 17px;
+        line-height: 23px;
+        color: $normalTextColor;
+      }
+    }
+  }
+  &__title {
+    max-width: 920px;
+    width: 100%;
+    margin: 0 auto;
+    p {
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 25px;
+      letter-spacing: 6px;
+      color: $highlightTextColor;
+      @include flex-container();
+      width: fit-content;
+      margin-bottom: 32px;
+      span {
+        display: inline-flex;
+        width: 72px;
+        height: 2px;
+        background: $highlightTextColor;
+        margin-right: 32px;
+      }
+    }
+    h1 {
+      font-weight: 400;
+      font-size: 88px;
+      line-height: 100px;
+      text-transform: capitalize;
+      span {
+        font-weight: 700;
+        font-size: 96px;
+      }
+    }
+    margin-bottom: 125px;
+  }
+  &__scroll-btn {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
+    color: $normalTextColor;
+    @include flex-container();
+    width: fit-content;
+    margin: 0 auto;
+    span {
+      margin-right: 9px;
+    }
+  }
+  &__bottom {
+    background: linear-gradient(360deg, #000000 0%, rgba(0, 0, 0, 0) 77.78%);
+    // height: 358px;
+  }
+}

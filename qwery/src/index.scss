@@ -1,5 +1,59 @@
-body {
-  
+@import './template/colors.scss';
+@import './template/mixin.scss';
+* {
+  box-sizing: border-box;
+  text-size-adjust: none;
 }
-
+::-webkit-scrollbar {
+  width: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+ul,
+li,
+body,
+input,
+button {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: $normalTextColor;
+  cursor: pointer;
+}
+ul,
+li {
+  list-style-type: none;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  line-height: 26px;
+  min-width: 320px;
+  position: relative;
+  overflow-x: hidden;
+  color: $normalTextColor;
+  background-color: $mainBackground;
+}
+input {
+  outline: none;
+}
+button {
+  cursor: pointer;
+  outline: none;
+  background: transparent;
+  border: none;
+}
+.container {
+  max-width: 1481px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
 
