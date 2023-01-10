@@ -6,6 +6,9 @@
     position: relative;
     top: -178px;
   }
+  &__image {
+    margin-right: 20px;
+  }
   &__text {
     max-width: 632px;
     h2 {
@@ -20,6 +23,37 @@
     h3,
     p {
       margin-bottom: 28px;
+    }
+  }
+}
+@media screen and (max-width: 1500px) {
+  .tour {
+    padding-bottom: 150px;
+    &__container {
+      top: 0px;
+    }
+  }
+}
+@media screen and (max-width: 1110px) {
+  .tour {
+    &__container {
+      flex-direction: column;
+    }
+    &__image {
+      margin-right: 0px;
+      margin-bottom: 20px;
+      max-width: 597px;
+      width: 100%;
+    }
+  }
+}
+@media screen and (max-width: 610px) {
+  .tour {
+    padding-bottom: 80px;
+    &__text {
+      p {
+        font-size: 16px;
+      }
     }
   }
 }

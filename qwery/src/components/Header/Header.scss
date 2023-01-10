@@ -139,6 +139,13 @@
     background-size: cover !important;
   }
 }
+@media screen and (max-width: 1600px) {
+  .header {
+   &__top{
+    padding-bottom: 200px;
+   }
+  }
+}
 @media screen and (max-width: 950px) {
   .header {
     &__wrapper {

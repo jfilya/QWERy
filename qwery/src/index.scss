@@ -102,3 +102,9 @@ h3 {
     transform: scale(0.8);
   }
 }
+@media screen and (max-width: 610px) {
+  h2{
+    font-size: 40px;
+    line-height: 50px;
+  }
+}
