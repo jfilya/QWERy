@@ -7,7 +7,7 @@ class Header extends React.Component {
     super(props);
     this.divStyle = {
       backgroundImage: 'url("images/bg-header.jpg")',
-      backgroundSize: "cover",
+      backgroundSize: "contain",
       backgroundRepeat: "no-repeat",
     };
   }
@@ -37,9 +37,9 @@ class Header extends React.Component {
               </div>
             </nav>
             <div className="header__title">
-              <p>
+              <h3>
                 <span></span>explore the Nature Beauty
-              </p>
+              </h3>
               <h1>
                 <span>Discover</span>
                 <br /> Wonderful Indonesia

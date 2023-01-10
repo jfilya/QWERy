@@ -1,5 +1,5 @@
-@import './template/colors.scss';
-@import './template/mixin.scss';
+@import "./template/colors.scss";
+@import "./template/mixin.scss";
 * {
   box-sizing: border-box;
   text-size-adjust: none;
@@ -56,4 +56,49 @@ button {
   padding: 0 10px;
   margin: 0 auto;
 }
-
+h2 {
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 87px;
+  color: $normalTextColor;
+}
+h3 {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: 6px;
+  color: $highlightTextColor;
+  @include flex-container();
+  width: fit-content;
+  margin-bottom: 32px;
+  span {
+    display: inline-flex;
+    width: 72px;
+    height: 2px;
+    background: $highlightTextColor;
+    margin-right: 24px;
+  }
+}
+.btn {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 18px;
+  color: $highlightTextColor;
+  @include flex-container();
+  align-items: start;
+  max-width: 128px;
+  transition: 0.5s;
+  span{
+    transition: 0.5s;
+  }
+  &:hover{
+    text-shadow: 1px 1px 7px rgba(255,  255,  255, 0.96);
+    span{
+      transform: translateX(5px);
+    }
+  }
+  &:active{
+    transform: scale(0.8);
+  }
+}

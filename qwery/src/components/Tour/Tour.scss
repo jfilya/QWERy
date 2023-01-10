@@ -1,0 +1,25 @@
+@import "../../template/mixin.scss";
+@import "../../template/colors.scss";
+.tour {
+  &__container {
+    @include flex-container();
+    position: relative;
+    top: -178px;
+  }
+  &__text {
+    max-width: 632px;
+    h2 {
+      max-width: 420px;
+    }
+    p {
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 32px;
+    }
+    h2,
+    h3,
+    p {
+      margin-bottom: 28px;
+    }
+  }
+}

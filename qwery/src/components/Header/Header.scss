@@ -67,21 +67,8 @@
     width: 100%;
     margin: 0 auto;
     margin-bottom: 76px;
-    p {
-      text-transform: uppercase;
-      font-weight: 700;
-      font-size: 18px;
-      line-height: 25px;
-      letter-spacing: 6px;
-      color: $highlightTextColor;
-      @include flex-container();
-      width: fit-content;
-      margin-bottom: 32px;
-      span {
-        display: inline-flex;
-        width: 72px;
-        height: 2px;
-        background: $highlightTextColor;
+    h3{
+      span{
         margin-right: 32px;
       }
     }
@@ -185,9 +172,6 @@
         span {
           font-size: 56px;
         }
-      }
-      p {
-        font-size: 16px;
       }
     }
   }
