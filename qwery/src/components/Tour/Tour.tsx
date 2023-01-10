@@ -3,10 +3,10 @@ import React from "react";
 class Tour extends React.Component {
   render() {
     return (
-      <section className="tour element-appearance">
+      <section className="tour " id="tour">
         <div className="container tour__container">
-          <img className="tour__image" src="images/image-tour.jpg" alt="" />
-          <div className="tour__text">
+          <img className="tour__image element-appearance-img" src="images/image-tour.jpg" alt="" />
+          <div className="tour__text element-appearance">
             <h3>
               <span></span>
               EAST nUSA TENGGARA

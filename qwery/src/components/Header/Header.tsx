@@ -46,7 +46,7 @@ class Header extends React.Component {
               </h1>
             </div>
 
-            <a href="#" className="header__scroll-btn pulse">
+            <a href="#tour" className="header__scroll-btn pulse">
               <span>Scroll down</span>
               <svg
                 width="16"
