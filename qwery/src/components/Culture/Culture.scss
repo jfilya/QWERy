@@ -4,7 +4,7 @@
   &__container {
     @include flex-container();
     position: relative;
-    margin-bottom: 250px;
+    padding-bottom: 250px;
   }
   &__image {
     margin-left: 20px;
@@ -23,7 +23,6 @@
 }
 @media screen and (max-width: 1500px) {
   .culture {
-    padding-bottom: 150px;
     &__container {
       top: 0px;
     }
@@ -33,6 +32,7 @@
   .culture {
     &__container {
       flex-direction: column;
+      padding-bottom: 100px;
     }
     &__image {
       margin-left: 0px;
@@ -42,8 +42,4 @@
     }
   }
 }
-@media screen and (max-width: 610px) {
-  .culture {
-    padding-bottom: 80px;
-  }
-}
+
