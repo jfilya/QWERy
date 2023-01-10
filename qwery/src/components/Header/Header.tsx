@@ -7,7 +7,7 @@ class Header extends React.Component {
     super(props);
     this.divStyle = {
       backgroundImage: 'url("images/bg-header.jpg")',
-      backgroundSize: "contain",
+      backgroundSize: "cover",
       backgroundRepeat: "no-repeat",
     };
   }
@@ -46,7 +46,7 @@ class Header extends React.Component {
               </h1>
             </div>
 
-            <a href="#" className="header__scroll-btn">
+            <a href="#" className="header__scroll-btn pulse">
               <span>Scroll down</span>
               <svg
                 width="16"
