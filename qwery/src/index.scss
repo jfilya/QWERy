@@ -35,8 +35,9 @@ li {
 }
 body {
   font-family: "Open Sans", sans-serif;
-  font-size: 16px;
-  line-height: 26px;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 32px;
   min-width: 320px;
   position: relative;
   overflow-x: hidden;
@@ -107,6 +108,9 @@ h3 {
   h2{
     font-size: 40px;
     line-height: 50px;
+  }
+  p{
+    font-size: 16px;
   }
 }
 .element-appearance{

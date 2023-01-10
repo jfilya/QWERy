@@ -1,5 +1,6 @@
 import Header from "./components/Header/Header";
 import Tour from "./components/Tour/Tour";
+import Bromo from "./components/Bromo/Bromo";
 import React from "react";
 function App() {
       React.useEffect(() => {
@@ -17,7 +18,7 @@ function App() {
       let options = { threshold: [0.5] };
       let observer = new IntersectionObserver(onEntry, options);
       let elements = document.querySelectorAll(
-        ".element-appearance, .element-appearance-img"
+        ".element-appearance, .element-appearance-img, .bromo__title-min, .bromo__title, .bromo__info, .bromo__link"
       ) as unknown as HTMLElement[];
       elements.forEach((elm) => observer.observe(elm));
   });
@@ -27,6 +28,7 @@ function App() {
     <div className="App">
       <Header />
       <Tour />
+      <Bromo />
     </div>
   );
 }

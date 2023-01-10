@@ -1,0 +1,86 @@
+@import "../../template/mixin.scss";
+@import "../../template/colors.scss";
+.bromo {
+  &__container {
+    margin-top: 70px;
+    padding-top: 533px;
+    position: relative;
+    padding-bottom: 42px;
+    max-width: 1461px;
+    margin-bottom: 250px;
+  }
+  &__arrow {
+    @include flex-container();
+    position: absolute;
+    top: 43%;
+    width: 100%;
+    padding: 40px;
+    svg {
+      cursor: pointer;
+      path {
+        transition: 0.5s;
+      }
+      &:hover {
+        path {
+          fill: $mainBackground;
+        }
+      }
+      &:active {
+        path {
+          transform: scale(0.7);
+        }
+      }
+    }
+  }
+  &__title-min {
+    margin: 0 auto;
+    margin-bottom: 25px;
+    opacity: 0;
+    transform: rotate(90deg);
+    transition: 1s;
+    span {
+      margin-left: 24px;
+    }
+  }
+
+  &__title {
+    margin: 0 auto;
+    max-width: 705px;
+    text-align: center;
+    margin-bottom: 27px;
+    opacity: 0;
+    transform: translateX(-200px);
+    transition: 2s;
+  }
+  &__info {
+    max-width: 934px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 43px;
+    opacity: 0;
+    transform: translateX(200px);
+    transition: 3s;
+  }
+  &__link {
+    margin: 0 auto;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: 4s;
+  }
+}
+.bromo__title-min.element-show {
+  opacity: 1;
+  transform: rotate(0deg);
+}
+.bromo__title.element-show {
+  opacity: 1;
+  transform: translateX(0px);
+}
+.bromo__info.element-show {
+  opacity: 1;
+  transform: translateX(0px);
+}
+.bromo__link.element-show {
+  opacity: 1;
+  transform: translateY(0px);
+}
