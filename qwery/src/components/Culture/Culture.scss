@@ -1,0 +1,48 @@
+@import "../../template/mixin.scss";
+@import "../../template/colors.scss";
+.culture {
+  &__container {
+    @include flex-container();
+    position: relative;
+  }
+  &__image {
+    margin-left: 20px;
+  }
+  &__text {
+    max-width: 640px;
+    h2 {
+      max-width: 555px;
+    }
+    h2,
+    h3,
+    p {
+      margin-bottom: 28px;
+    }
+  }
+}
+@media screen and (max-width: 1500px) {
+  .culture {
+    padding-bottom: 150px;
+    &__container {
+      top: 0px;
+    }
+  }
+}
+@media screen and (max-width: 1110px) {
+  .culture {
+    &__container {
+      flex-direction: column;
+    }
+    &__image {
+      margin-left: 0px;
+      margin-top: 20px;
+      max-width: 597px;
+      width: 100%;
+    }
+  }
+}
+@media screen and (max-width: 610px) {
+  .culture {
+    padding-bottom: 80px;
+  }
+}
