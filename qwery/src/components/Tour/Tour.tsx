@@ -3,7 +3,7 @@ import React from "react";
 class Tour extends React.Component {
   render() {
     return (
-      <section className="tour">
+      <section className="tour element-appearance">
         <div className="container tour__container">
           <img className="tour__image" src="images/image-tour.jpg" alt="" />
           <div className="tour__text">
