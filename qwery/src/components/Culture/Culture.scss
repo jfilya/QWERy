@@ -4,6 +4,7 @@
   &__container {
     @include flex-container();
     position: relative;
+    margin-bottom: 250px;
   }
   &__image {
     margin-left: 20px;
