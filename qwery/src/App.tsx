@@ -2,6 +2,7 @@ import Header from "./components/Header/Header";
 import Tour from "./components/Tour/Tour";
 import Bromo from "./components/Bromo/Bromo";
 import Culture from "./components/Culture/Culture";
+import Footer from "./components/Footer/Footer";
 import React from "react";
 function App() {
       React.useEffect(() => {
@@ -31,6 +32,7 @@ function App() {
       <Tour />
       <Bromo />
       <Culture />
+      <Footer/>
     </div>
   );
 }

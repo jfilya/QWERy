@@ -1,0 +1,70 @@
+@import "../../template/mixin.scss";
+@import "../../template/colors.scss";
+.footer {
+  &__top {
+    @include flex-container();
+    padding-bottom: 55px;
+    border-bottom: 1px solid #ffffff4d;
+    margin-bottom: 55px;
+  }
+  &__logo {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 65px;
+    letter-spacing: 0.01em;
+    text-transform: capitalize;
+    color: $normalTextColor;
+  }
+  &__started {
+    max-width: 585px;
+    width: 100%;
+    @include flex-container();
+    &_btn {
+      cursor: pointer;
+      background: $btnColor;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 17px;
+      line-height: 22px;
+      color: $mainBackground;
+      width: 240px;
+      height: 69px;
+      @include flex-container();
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+      span {
+        z-index: 2;
+      }
+      &:before,
+      &:after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 0;
+        border: 0 solid;
+        transform: rotate(360deg);
+        transition: 0.5s ease-in-out;
+      }
+
+      &:before {
+        bottom: 0;
+        left: 0;
+        border-color: transparent transparent transparent rgb(255, 255, 255);
+      }
+
+      &:after {
+        top: 0;
+        right: 0;
+        border-color: transparent rgb(255, 255, 255) transparent transparent;
+      }
+
+      &:hover {
+        &:before,
+        &:after {
+          border-width: 68px 249px;
+        }
+      }
+    }
+  }
+}
