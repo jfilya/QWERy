@@ -3,9 +3,11 @@
 .footer {
   &__top {
     @include flex-container();
-    padding-bottom: 55px;
+    align-items: flex-start;
+    padding-bottom: 50px;
     border-bottom: 1px solid #ffffff4d;
     margin-bottom: 55px;
+    padding-left: 3px;
   }
   &__logo {
     font-weight: 700;
@@ -14,11 +16,18 @@
     letter-spacing: 0.01em;
     text-transform: capitalize;
     color: $normalTextColor;
+    padding-top: 10px;
   }
   &__started {
-    max-width: 585px;
+    max-width: 474px;
     width: 100%;
     @include flex-container();
+    &_ready {
+      font-weight: 400;
+      font-size: 22px;
+      line-height: 29px;
+      letter-spacing: -0.3px;
+    }
     &_btn {
       cursor: pointer;
       background: $btnColor;

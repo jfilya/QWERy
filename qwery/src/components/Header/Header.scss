@@ -2,7 +2,7 @@
 @import "../../template/colors.scss";
 .header {
   &__top {
-    padding-top: 58px;
+    padding-top: 55px;
     padding-bottom: 503px;
     background: linear-gradient(
       330.24deg,
@@ -17,7 +17,7 @@
     margin: 0 auto;
     nav {
       @include flex-container();
-      padding-bottom: 196px;
+      padding-bottom: 192px;
       ul {
         padding-top: 7px;
         display: flex;
@@ -66,7 +66,7 @@
     max-width: 920px;
     width: 100%;
     margin: 0 auto;
-    margin-bottom: 76px;
+    margin-bottom: 78px;
     h3{
       span{
         margin-right: 32px;
