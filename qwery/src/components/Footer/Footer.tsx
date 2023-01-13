@@ -24,7 +24,7 @@ class Footer extends React.Component {
                   required
                   minLength={2}
                 />
-                <button type="submit">
+                <button type="submit" className="footer__started_btn">
                   <svg
                     width="28"
                     height="28"
