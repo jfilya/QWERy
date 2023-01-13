@@ -15,7 +15,7 @@ class Footer extends React.Component {
             </div>
           </div>
           <div className="footer__middle">
-            <div className="footer__left element-appearance-img">
+            <div className="footer__left element-appearance">
               <h4>Let's go on vacation, Make your day</h4>
               <form action="#">
                 <input
@@ -40,7 +40,7 @@ class Footer extends React.Component {
                 </button>
               </form>
             </div>
-            <div className="footer__right link">
+            <div className="footer__right element-appearance-img">
               <ul>
                 <li>Services</li>
                 <li>
@@ -82,7 +82,7 @@ class Footer extends React.Component {
               </ul>
             </div>
           </div>
-          <div className="footer__bottom">
+          <div className="footer__bottom link">
             <div className="footer__bottom-link">
               <ul className="footer__bottom-privacy">
                 <li>
