@@ -1,6 +1,7 @@
 @import "../../template/mixin.scss";
 @import "../../template/colors.scss";
 .footer {
+  padding-bottom: 118px;
   &__top {
     @include flex-container();
     align-items: flex-start;
@@ -73,6 +74,113 @@
         &:after {
           border-width: 68px 249px;
         }
+      }
+    }
+  }
+  &__middle {
+    margin-bottom: 106px;
+    @include flex-container();
+    align-items: start;
+  }
+  &__left {
+    max-width: 400px;
+    height: 221px;
+    h4 {
+      font-weight: 700;
+      font-size: 36px;
+      line-height: 49px;
+      letter-spacing: -0.3px;
+      color: $normalTextColor;
+      margin-bottom: 50px;
+    }
+    form {
+      height: 69px;
+      border-bottom: 1px solid #ffffff4d;
+      width: 100%;
+      @include flex-container();
+    }
+    input {
+      background: transparent;
+      border: none;
+      padding-left: 15px;
+      margin-top: -10px;
+      &::placeholder {
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 20px;
+        letter-spacing: -0.204545px;
+        color: $normalTextColor;
+        opacity: 0.5;
+      }
+    }
+    button {
+      background: #ffa343;
+      border-radius: 8px 8px 0px 0px;
+      width: 69px;
+      height: 100%;
+    }
+  }
+  &__right {
+    @include flex-container();
+    align-items: start;
+    max-width: 810px;
+    width: 100%;
+    padding-right: 108px;
+    ul {
+      li {
+        margin-bottom: 13px;
+        &:first-child {
+          margin-top: 18px;
+          font-weight: 700;
+          font-size: 20px;
+          letter-spacing: -0.231818px;
+          color: #ffd1a0;
+        }
+        a {
+          font-weight: 400;
+          font-size: 19px;
+          letter-spacing: -0.204545px;
+          color: $normalTextColor;
+        }
+      }
+    }
+  }
+  &__bottom {
+    p {
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 32px;
+      text-align: center;
+      color: $normalTextColor;
+      opacity: 0.5;
+    }
+  }
+  &__bottom-link {
+    margin-bottom: 156px;
+    @include flex-container();
+    padding-right: 43px;
+  }
+  &__bottom-privacy {
+    padding-left: 40px;
+    @include flex-container();
+    li {
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 20px;
+      letter-spacing: -0.204545px;
+      color: $normalTextColor;
+
+      &:first-child {
+        margin-right: 90px;
+      }
+    }
+  }
+  &__bottom-social {
+    width: 173px;
+    @include flex-container();
+    li {
+      a {
+        display: flex;
       }
     }
   }
