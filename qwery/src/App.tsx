@@ -20,7 +20,7 @@ function App() {
       let options = { threshold: [0.5] };
       let observer = new IntersectionObserver(onEntry, options);
       let elements = document.querySelectorAll(
-        ".element-appearance, .element-appearance-img, .bromo__title-min, .bromo__title, .bromo__info, .bromo__link"
+        ".element-appearance, .element-appearance-img, .title-min, .title, .info, .info-top, .link"
       ) as unknown as HTMLElement[];
       elements.forEach((elm) => observer.observe(elm));
   });

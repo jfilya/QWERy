@@ -91,43 +91,84 @@ h3 {
   align-items: start;
   max-width: 128px;
   transition: 0.5s;
-  span{
+  span {
     transition: 0.5s;
   }
-  &:hover{
-    text-shadow: 1px 1px 7px rgba(255,  255,  255, 0.96);
-    span{
+  &:hover {
+    text-shadow: 1px 1px 7px rgba(255, 255, 255, 0.96);
+    span {
       transform: translateX(5px);
     }
   }
-  &:active{
+  &:active {
     transform: scale(0.8);
   }
 }
 @media screen and (max-width: 610px) {
-  h2{
+  h2 {
     font-size: 40px;
     line-height: 50px;
   }
-  p{
+  p {
     font-size: 16px;
   }
 }
-.element-appearance{
+.element-appearance {
   transform: translateX(-100px);
-  opacity:0;
+  opacity: 0;
 }
-.element-appearance-img{
-  opacity:0;
+.element-appearance-img {
+  opacity: 0;
   transform: scale(0);
 }
-.element-appearance.element-show{
+.element-appearance.element-show {
   transform: translateX(0px);
-  opacity:1;
+  opacity: 1;
   transition: 1s;
 }
-.element-appearance-img.element-show{
-  opacity:1;
+.element-appearance-img.element-show {
+  opacity: 1;
   transform: scale(1);
   transition: 1s;
+}
+.title-min {
+  opacity: 0;
+  transform: rotate(90deg);
+  transition: 1s;
+}
+.title {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: 1s;
+}
+.info {
+  opacity: 0;
+  transition: 3s;
+}
+.info-top {
+  opacity: 0;
+  transform: translateY(-50%);
+  transition: 1s;
+}
+.link {
+  opacity: 0;
+  transform: translateY(50%);
+  transition: 4s;
+}
+.title-min.element-show {
+  opacity: 1;
+  transform: rotate(0deg);
+}
+.title.element-show {
+  opacity: 1;
+  transform: translateX(0%);
+}
+.info.element-show {
+  opacity: 1;
+}
+
+.info-top.element-show,
+.link.element-show {
+  opacity: 1;
+  transform: translateY(0%);
 }

@@ -41,20 +41,20 @@ class Bromo extends React.Component {
               />
             </svg>
           </div>
-          <h3 className="bromo__title-min">
+          <h3 className="bromo__title-min title-min">
             <span></span>
             Bromo
             <span></span>
           </h3>
-          <h2 className="bromo__title">Steady your steps, we will climb together!</h2>
-          <p className="bromo__info">
+          <h2 className="bromo__title title">Steady your steps, we will climb together!</h2>
+          <p className="bromo__info info">
             Enjoying the vast expanse of the sea of ​​​​sand, witnessing the
             splendor of Mount Semeru that soars into the sky, and gazing at the
             beauty of the sun moving out of its bed or otherwise enjoying the
             dim twilight from the Bromo ridge is an unforgettable experience
             when visiting Bromo.
           </p>
-          <a href="#" className="btn bromo__link">
+          <a href="#" className="btn bromo__link link">
             read more
             <span>
               <svg

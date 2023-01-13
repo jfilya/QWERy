@@ -16,7 +16,7 @@ class Header extends React.Component {
       <header className="header" style={this.divStyle}>
         <div className="header__top">
           <div className="header__wrapper">
-            <nav>
+            <nav className="info-top">
               <a href="#" className="header__logo">
                 QWERy
               </a>
@@ -37,16 +37,16 @@ class Header extends React.Component {
               </div>
             </nav>
             <div className="header__title">
-              <h3>
+              <h3 className="title-min">
                 <span></span>explore the Nature Beauty
               </h3>
-              <h1>
+              <h1 className="title">
                 <span>Discover</span>
                 <br /> Wonderful Indonesia
               </h1>
             </div>
 
-            <a href="#tour" className="header__scroll-btn pulse">
+            <a href="#tour" className="header__scroll-btn pulse link">
               <span>Scroll down</span>
               <svg
                 width="16"
