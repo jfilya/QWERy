@@ -9,6 +9,10 @@
     max-width: 1461px;
     margin-bottom: 227px;
     overflow: hidden;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
   }
   &__arrow {
     @include flex-container();
@@ -64,11 +68,11 @@
       margin-bottom: 100px;
     }
     &__arrow {
-      top:15%;
+      top: 15%;
     }
-    &__title-min{
-      span{
-        margin:5px;
+    &__title-min {
+      span {
+        margin: 5px;
       }
     }
   }

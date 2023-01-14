@@ -2,21 +2,40 @@ import "./Bromo.scss";
 import React from "react";
 class Bromo extends React.Component {
   divStyle: { [key: string]: string };
-  constructor(props: {} | Readonly<{}>) {
+  backImg: Array<string>;
+  item: number;
+  constructor(props: { count: number } | Readonly<{}>) {
     super(props);
+    this.backImg = [
+      "images/bg-bromo.jpg",
+      "images/bg-bromo2.jpg",
+      "images/bg-bromo3.jpg",
+      "images/bg-bromo4.jpg",
+    ];
     this.divStyle = {
-      backgroundImage: 'url("images/bg-bromo.jpg")',
-      backgroundSize: "cover",
-      backgroundRepeat: "no-repeat",
-      backgroundAttachment: "fixed",
+      backgroundImage: `${this.backImg.map((img) => `url(${img})`)}`,
     };
+    this.item = 0;
   }
   render() {
+    const itemsPlus = () => {
+      this.item < 3 ? this.item++ : (this.item = 0);
+      (
+        document.querySelector(".bromo__container") as HTMLDivElement
+      ).style.backgroundImage = `url(${this.backImg[this.item]})`;
+    };
+    const itemsMinus = () => {
+      this.item > 0 ? this.item-- : (this.item = 3);
+      (
+        document.querySelector(".bromo__container") as HTMLDivElement
+      ).style.backgroundImage = `url(${this.backImg[this.item]})`;
+    };
     return (
       <section className="bromo">
         <div className="container bromo__container" style={this.divStyle}>
           <div className="bromo__arrow">
             <svg
+              onClick={itemsMinus}
               width="30"
               height="30"
               viewBox="0 0 30 30"
@@ -29,6 +48,7 @@ class Bromo extends React.Component {
               />
             </svg>
             <svg
+              onClick={itemsPlus}
               width="30"
               height="30"
               viewBox="0 0 30 30"
@@ -46,7 +66,9 @@ class Bromo extends React.Component {
             Bromo
             <span></span>
           </h3>
-          <h2 className="bromo__title title">Steady your steps, we will climb together!</h2>
+          <h2 className="bromo__title title">
+            Steady your steps, we will climb together!
+          </h2>
           <p className="bromo__info info">
             Enjoying the vast expanse of the sea of ​​​​sand, witnessing the
             splendor of Mount Semeru that soars into the sky, and gazing at the
