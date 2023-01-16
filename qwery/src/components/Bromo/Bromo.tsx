@@ -18,48 +18,62 @@ class Bromo extends React.Component {
     this.item = 0;
   }
   render() {
+    const animationBack = (back: HTMLDivElement) => {
+      const switchBtn = document.querySelectorAll('.bromo__arrow button') as unknown as HTMLButtonElement[];
+      back.style.backgroundImage = `url(${this.backImg[this.item]})`;
+      back.classList.add("back-mymove");
+      switchBtn.forEach((b) => b.disabled = true)
+      back.onanimationend = () => {
+        back.classList.remove("back-mymove");
+        switchBtn.forEach((b) => b.disabled = false);
+      };
+    };
     const itemsPlus = () => {
-      this.item < 3 ? this.item++ : (this.item = 0);
-      (
-        document.querySelector(".bromo__container") as HTMLDivElement
-      ).style.backgroundImage = `url(${this.backImg[this.item]})`;
+      const back = document.querySelector(
+        ".bromo__container"
+      ) as HTMLDivElement;
+      this.item < this.backImg.length-1 ? this.item++ : (this.item = 0);
+      animationBack(back);
     };
     const itemsMinus = () => {
-      this.item > 0 ? this.item-- : (this.item = 3);
-      (
-        document.querySelector(".bromo__container") as HTMLDivElement
-      ).style.backgroundImage = `url(${this.backImg[this.item]})`;
+      const back = document.querySelector(
+        ".bromo__container"
+      ) as HTMLDivElement;
+      this.item > 0 ? this.item-- : (this.item = this.backImg.length-1);
+      animationBack(back);
     };
     return (
       <section className="bromo">
         <div className="container bromo__container" style={this.divStyle}>
           <div className="bromo__arrow">
-            <svg
-              onClick={itemsMinus}
-              width="30"
-              height="30"
-              viewBox="0 0 30 30"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M19.4187 4.3938L8.8125 15L19.4187 25.6063L21.1875 23.8388L12.3475 15L21.1875 6.1613L19.4187 4.3938Z"
-                fill="white"
-              />
-            </svg>
-            <svg
-              onClick={itemsPlus}
-              width="30"
-              height="30"
-              viewBox="0 0 30 30"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M10.5813 25.6062L21.1875 15L10.5813 4.3937L8.8125 6.1612L17.6525 15L8.8125 23.8387L10.5813 25.6062Z"
-                fill="white"
-              />
-            </svg>
+            <button onClick={itemsMinus}>
+              <svg
+                width="30"
+                height="30"
+                viewBox="0 0 30 30"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M19.4187 4.3938L8.8125 15L19.4187 25.6063L21.1875 23.8388L12.3475 15L21.1875 6.1613L19.4187 4.3938Z"
+                  fill="white"
+                />
+              </svg>
+            </button>
+            <button onClick={itemsPlus}>
+              <svg
+                width="30"
+                height="30"
+                viewBox="0 0 30 30"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M10.5813 25.6062L21.1875 15L10.5813 4.3937L8.8125 6.1612L17.6525 15L8.8125 23.8387L10.5813 25.6062Z"
+                  fill="white"
+                />
+              </svg>
+            </button>
           </div>
           <h3 className="bromo__title-min title-min">
             <span></span>

@@ -18,7 +18,7 @@
     @include flex-container();
     position: absolute;
     top: 43%;
-    width: 95%;
+    width: 100%;
     padding: 40px;
     svg {
       cursor: pointer;
@@ -75,5 +75,17 @@
         margin: 5px;
       }
     }
+  }
+}
+.back-mymove{
+  animation-name: mymove;
+  animation-duration: 0.5s;
+}
+@keyframes mymove {
+  0% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
   }
 }
