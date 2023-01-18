@@ -138,7 +138,7 @@ h3 {
 }
 .title {
   opacity: 0;
-  transform: translateX(-100%);
+  transform: translateX(-10%);
   transition: 1s;
 }
 .info {
@@ -153,7 +153,7 @@ h3 {
 .link {
   opacity: 0;
   transform: translateY(50%);
-  transition: 4s;
+  transition: 2.5s;
 }
 .title-min.element-show {
   opacity: 1;

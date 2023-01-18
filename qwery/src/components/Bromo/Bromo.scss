@@ -20,19 +20,19 @@
     top: 43%;
     width: 100%;
     padding: 40px;
-    svg {
+    button {
+
       cursor: pointer;
-      path {
-        transition: 0.5s;
-      }
-      &:hover {
+      svg {
         path {
-          fill: $mainBackground;
+          transition: 0.5s;
         }
       }
-      &:active {
-        path {
-          transform: scale(0.7);
+      &:hover {
+        svg {
+          path {
+            fill: $mainBackground;
+          }
         }
       }
     }
@@ -77,7 +77,7 @@
     }
   }
 }
-.back-mymove{
+.back-mymove {
   animation-name: mymove;
   animation-duration: 0.5s;
 }

@@ -4,7 +4,8 @@ class Bromo extends React.Component {
   divStyle: { [key: string]: string };
   backImg: Array<string>;
   item: number;
-  constructor(props: { count: number } | Readonly<{}>) {
+
+  constructor(props: {} | Readonly<{}>) {
     super(props);
     this.backImg = [
       "images/bg-bromo.jpg",
@@ -16,37 +17,39 @@ class Bromo extends React.Component {
       backgroundImage: `${this.backImg.map((img) => `url(${img})`)}`,
     };
     this.item = 0;
+
+    this.animationBack = this.animationBack.bind(this);
+    this.itemsPlus = this.itemsPlus.bind(this);
+    this.itemsMinus = this.itemsMinus.bind(this);
+  }
+
+  animationBack() {
+    const back = document.querySelector(".bromo__container") as HTMLDivElement;
+    const switchBtn = document.querySelectorAll(
+      ".bromo__arrow button"
+    ) as unknown as HTMLButtonElement[];
+    switchBtn.forEach((b) => (b.style.display="none"));
+    back.style.backgroundImage = `url(${this.backImg[this.item]})`;
+    back.classList.add("back-mymove");
+    back.onanimationend = () => {
+      back.classList.remove("back-mymove");
+      switchBtn.forEach((b) => (b.style.display="block"));
+    };
+  }
+  itemsPlus() {
+    this.item < this.backImg.length - 1 ? this.item++ : (this.item = 0);
+    this.animationBack();
+  }
+  itemsMinus() {
+    this.item > 0 ? this.item-- : (this.item = this.backImg.length - 1);
+    this.animationBack();
   }
   render() {
-    const animationBack = (back: HTMLDivElement) => {
-      const switchBtn = document.querySelectorAll('.bromo__arrow button') as unknown as HTMLButtonElement[];
-      back.style.backgroundImage = `url(${this.backImg[this.item]})`;
-      back.classList.add("back-mymove");
-      switchBtn.forEach((b) => b.disabled = true)
-      back.onanimationend = () => {
-        back.classList.remove("back-mymove");
-        switchBtn.forEach((b) => b.disabled = false);
-      };
-    };
-    const itemsPlus = () => {
-      const back = document.querySelector(
-        ".bromo__container"
-      ) as HTMLDivElement;
-      this.item < this.backImg.length-1 ? this.item++ : (this.item = 0);
-      animationBack(back);
-    };
-    const itemsMinus = () => {
-      const back = document.querySelector(
-        ".bromo__container"
-      ) as HTMLDivElement;
-      this.item > 0 ? this.item-- : (this.item = this.backImg.length-1);
-      animationBack(back);
-    };
     return (
       <section className="bromo">
         <div className="container bromo__container" style={this.divStyle}>
           <div className="bromo__arrow">
-            <button onClick={itemsMinus}>
+            <button onClick={this.itemsMinus}>
               <svg
                 width="30"
                 height="30"
@@ -60,7 +63,7 @@ class Bromo extends React.Component {
                 />
               </svg>
             </button>
-            <button onClick={itemsPlus}>
+            <button onClick={this.itemsPlus}>
               <svg
                 width="30"
                 height="30"
