@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/QWERy/static/css/main.16f0969a.css",
+    "main.js": "/QWERy/static/js/main.b73276cf.js",
+    "index.html": "/QWERy/index.html",
+    "main.16f0969a.css.map": "/QWERy/static/css/main.16f0969a.css.map",
+    "main.b73276cf.js.map": "/QWERy/static/js/main.b73276cf.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.16f0969a.css",
+    "static/js/main.b73276cf.js"
+  ]
+}
